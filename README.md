@@ -9,8 +9,8 @@ This Spring Boot application serves as a server that doubles as a client, sendin
 
 <h2>The Tech Stack:</h2>
 
-<b>Spring Boot:</b> The backbone of our application, providing a powerful framework for building Java applications.
-<b>Third-Party APIs:</b> Leveraging external data sources is key, and in my case, I used weather and location APIs.
-<b>HTTP Handling:</b> Utilizing the HttpClient, HttpRequest, and HttpResponse classes to communicate with external APIs.
-<b>JSON Data Parsing:</b> I've used the ObjectMapper class to efficiently parse JSON data.
-<b>Error Handling:</b> Robust error handling to ensure the application remains resilient.
+<b>Spring Boot:</b> The backbone of our application, providing a powerful framework for building Java applications.<br>
+<b>Third-Party APIs:</b> Leveraging external data sources is key, and in my case, I used weather and location APIs.<br>
+<b>HTTP Handling:</b> Utilizing the HttpClient, HttpRequest, and HttpResponse classes to communicate with external APIs.<br>
+<b>JSON Data Parsing:</b> I've used the ObjectMapper class to efficiently parse JSON data.<br>
+<b>Error Handling:</b> Robust error handling to ensure the application remains resilient.<br>
