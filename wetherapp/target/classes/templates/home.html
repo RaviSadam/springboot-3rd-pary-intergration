@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(rgba(79, 218, 181, 0.5), rgba(34, 146, 207, 0.5)), url('background-image.jpg'); /* Replace 'background-image.jpg' with your image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(5, 82, 41, 0.7);
+            padding: 20px;
+            width:400px;
+            border-radius: 10px;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width:250px;
+            height: 20px;
+            font-size: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            font-weight: 800;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+        .weather-attribute {
+            margin: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+
+        .weather-value {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Weather Details</h1>
+        <div class="search-bar" style="margin-left:20px ;">
+            <input type="text" id="locationInput" placeholder="Enter City Name">
+            <button id="searchButton" th:onclick="searchLocation()">Search</button>
+        </div><br>
+        <div class="search-bar" style="margin-left:20px;text-align:center">
+            <p style="display: inline;font-size:20px;font-weight:700">Location: <span th:text="${data.location}">Hyderabad</span></p>
+        </div>
+        <div class="weather-attribute">Cloud Percentage:<span th:text="${data.cloudPct}%"></span></div>
+
+        <div class="weather-attribute">Temperature:<span th:text="${data.temp}&deg;C"></span></div>
+
+        <div class="weather-attribute">Feels Like:<span th:text="${data.feelsLike}&deg;C"></span></div>
+
+        <div class="weather-attribute">Humidity:<span th:text="${data.humidity}%"></span></div>
+
+        <div class="weather-attribute">Min Temperature:<span th:text="${data.minTemp}&deg;C"></span></div>
+
+        <div class="weather-attribute">Max Temperature:<span th:text="${data.maxTemp}&deg;C"></span></div>
+
+        <div class="weather-attribute">Wind Speed:<span th:text="${data.windSpeed} m/s"></span></div>
+
+        <div class="weather-attribute">Wind Degrees:<span th:text="${data.windDegrees}&deg;"></span></div>
+
+        <div class="weather-attribute">Sunrise:<span th:text="${date.sunrise}"></span></div>
+
+        <div class="weather-attribute">Sunset:<span th:text="${date.sunset}"></span></div>
+        <a style="margin-left:20px" href="http://localhost:8080/home" style="color:white"><button> Weather For Current Location</button></a>
+    </div>
+    <script>
+        function searchLocation(){
+            var location=document.getElementById("locationInput").value;
+            window.location.href="http://localhost:8080/home?location"+location;
+        }
+    </script>
+</body>
+</html>

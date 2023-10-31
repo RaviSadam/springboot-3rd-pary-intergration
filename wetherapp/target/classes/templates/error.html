@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Page</title>
+    <style>
+        /* Add CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #ed4a4a, #f39521);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .error-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        p {
+            color: #2196F3;
+        }
+        .error-icon{
+            color: #d80f0c;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 style=" color: #da1414;">Error Occured</h1>
+        <div class="error-icon">
+            <span>&#9888;</span>
+        </div>
+        <h1 th:text="${errorCode}"></h1>
+        <p th:text="${errorMessage}"></p>
+    </div>
+</body>
+</html>
