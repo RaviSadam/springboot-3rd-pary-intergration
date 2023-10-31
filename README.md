@@ -8,9 +8,10 @@ This Spring Boot application serves as a server that doubles as a client, sendin
 <h2>Error Handling:</h2> We all know that not everything goes perfectly all the time. To ensure a robust application, I've included error handling mechanisms to gracefully deal with any issues that may arise during the API requests or data processing.
 
 <h2>The Tech Stack:</h2>
-
-<b>Spring Boot:</b> The backbone of our application, providing a powerful framework for building Java applications.<br>
-<b>Third-Party APIs:</b> Leveraging external data sources is key, and in my case, I used weather and location APIs.<br>
-<b>HTTP Handling:</b> Utilizing the HttpClient, HttpRequest, and HttpResponse classes to communicate with external APIs.<br>
-<b>JSON Data Parsing:</b> I've used the ObjectMapper class to efficiently parse JSON data.<br>
-<b>Error Handling:</b> Robust error handling to ensure the application remains resilient.<br>
+<ul>
+<li><b>Spring Boot:</b> The backbone of our application, providing a powerful framework for building Java applications.<br><li>
+<li><b>Third-Party APIs:</b> Leveraging external data sources is key, and in my case, I used weather and location APIs.<br><li>
+<li><b>HTTP Handling:</b> Utilizing the HttpClient, HttpRequest, and HttpResponse classes to communicate with external APIs.<br><li>
+<li><b>JSON Data Parsing:</b> I've used the ObjectMapper class to efficiently parse JSON data.<br><li>
+<li><b>Error Handling:</b> Robust error handling to ensure the application remains resilient.<br><li>
+</ul>
